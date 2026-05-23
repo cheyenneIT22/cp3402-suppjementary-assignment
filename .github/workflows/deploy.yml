@@ -1,0 +1,25 @@
+name: Deploy Child Theme
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup SSH
+        uses: webfactory/ssh-agent@v0.8.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Deploy theme to DigitalOcean
+        run: |
+          rsync -avz --delete \
+          ./wordpress/wp-content/themes/u3a-child/ \
+          ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_IP }}:${{ secrets.THEME_DIR }}/u3a-child/
