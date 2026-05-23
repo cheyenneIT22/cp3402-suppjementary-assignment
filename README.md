@@ -50,6 +50,9 @@ The design focuses on accessibility, responsiveness, and community engagement.
 - GitHub version control workflow
 
 ---
+## Project Management
+
+Trello was used to manage tasks, track development progress, and organise deployment and documentation activities throughout the project.
 
 # Local Development Environment
 
