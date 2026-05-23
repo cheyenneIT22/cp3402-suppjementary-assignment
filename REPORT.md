@@ -43,7 +43,7 @@ I created a GitHub Actions workflow (deploy.yml) that:
 Checks out the repository
 Connects to the Droplet via SSH
 Uses rsync to upload the child theme to:
-/var/www/html/wp-content/themes/lifelong-learning-child>/
+/var/www/html/wp-content/themes/u3a-child>/
 Deletes old files and replaces them with the latest version
 Trigger 
 The workflow runs automatically on:
