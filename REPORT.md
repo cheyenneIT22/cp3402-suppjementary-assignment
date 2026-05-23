@@ -43,9 +43,9 @@ I created a GitHub Actions workflow (deploy.yml) that:
 Checks out the repository
 Connects to the Droplet via SSH
 Uses rsync to upload the child theme to:
-/var/www/html/wp-content/themes/<child-theme-folder>/
+/var/www/html/wp-content/themes/lifelong-learning-child>/
 Deletes old files and replaces them with the latest version
-Trigger
+Trigger 
 The workflow runs automatically on:
 Code
 on:
